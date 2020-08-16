@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+
+  .logo {
+    height: 80px;
+    margin-left: 25px;
+  }
+
+  .options {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+
+    .option {
+      padding: 15px;
+    }
+  }
+}
