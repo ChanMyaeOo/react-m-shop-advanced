@@ -1,0 +1,33 @@
+.outer-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video-container video {
+  min-height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  text-align: center;
+  line-height: 1.5;
+  color: #f2f2f2;
+
+  p {
+    color: #111;
+    font-weight: 700;
+  }
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #18266c;
+  opacity: 0.7;
+}
