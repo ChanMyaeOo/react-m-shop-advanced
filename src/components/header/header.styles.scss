@@ -1,5 +1,6 @@
 .outer-container {
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +28,7 @@
 .overlay {
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #18266c;
   opacity: 0.7;
 }
