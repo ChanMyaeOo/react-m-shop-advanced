@@ -1,16 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.styles.scss";
 import { ReactComponent as Logo } from "../../assets/images/crown.svg";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <Logo className="logo" />
+      <Link to="/">
+        <Logo className="logo" />
+      </Link>
 
       <div className="options">
-        <div className="option">Shop</div>
-        <div className="option">Contact</div>
-        <div className="option">Sign In</div>
+        <Link className="option" to="/">
+          Shop
+        </Link>
+        <Link className="option" to="/">
+          Contact
+        </Link>
+        <Link className="option" to="/signin">
+          Sign In
+        </Link>
       </div>
     </div>
   );
