@@ -8,7 +8,7 @@ const Header = () => {
     <div className="outer-container">
       <div className="video-container">
         <video autoPlay loop muted poster={ProductImage}>
-          <source src={Product} type="video/mp4" />
+          <source src={""} type="video/mp4" />
         </video>
       </div>
       <div className="overlay"></div>
