@@ -1,11 +1,14 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import "./navbar.styles.scss";
+import { createStructuredSelector } from "reselect";
 import { ReactComponent as Logo } from "../../assets/images/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
-import { connect } from "react-redux";
 import ShoppingIcon from "../shopping-icon/shopping-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import { selectHidden } from "../../redux/cart/cart.selectors";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
+import "./navbar.styles.scss";
 
 const Navbar = ({ currentUser, hidden }) => {
   return (
@@ -38,9 +41,9 @@ const Navbar = ({ currentUser, hidden }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
-  hidden: state.cart.hidden,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectHidden,
 });
 
 export default connect(mapStateToProps)(Navbar);
