@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import ShoppingIcon from "../shopping-icon/shopping-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
-const Navbar = ({ currentUser }) => {
+const Navbar = ({ currentUser, hidden }) => {
   return (
     <div className="navbar">
       <Link to="/">
@@ -33,13 +33,14 @@ const Navbar = ({ currentUser }) => {
         )}
         <ShoppingIcon />
       </div>
-      <CartDropdown />
+      {hidden ? null : <CartDropdown />}
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
   currentUser: state.user.currentUser,
+  hidden: state.cart.hidden,
 });
 
 export default connect(mapStateToProps)(Navbar);
