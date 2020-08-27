@@ -5,6 +5,7 @@ import { ReactComponent as Logo } from "../../assets/images/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
 import ShoppingIcon from "../shopping-icon/shopping-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 const Navbar = ({ currentUser }) => {
   return (
@@ -32,6 +33,7 @@ const Navbar = ({ currentUser }) => {
         )}
         <ShoppingIcon />
       </div>
+      <CartDropdown />
     </div>
   );
 };
