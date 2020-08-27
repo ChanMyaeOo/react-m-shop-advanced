@@ -4,6 +4,7 @@ import "./navbar.styles.scss";
 import { ReactComponent as Logo } from "../../assets/images/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
+import ShoppingIcon from "../shopping-icon/shopping-icon.component";
 
 const Navbar = ({ currentUser }) => {
   return (
@@ -29,6 +30,7 @@ const Navbar = ({ currentUser }) => {
             Sign In
           </Link>
         )}
+        <ShoppingIcon />
       </div>
     </div>
   );
