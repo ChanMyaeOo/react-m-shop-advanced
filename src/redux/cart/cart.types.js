@@ -1,5 +1,7 @@
 const cartActionTypes = {
   TOGGLE_CART_DROPDOWN: "TOGGLE_CART_DROPDOWN",
   ADD_ITEM: "ADD_ITEM",
+  REMOVE_ITEM: "REMOVE_ITEM",
+  REDUCE_ITEM_FROM_CART: "REDUCE_ITEM_FROM_CART",
 };
 export default cartActionTypes;
