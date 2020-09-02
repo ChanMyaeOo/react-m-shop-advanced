@@ -13,12 +13,13 @@ const Header = () => {
       </div>
       <div className="overlay"></div>
       <div className="text">
-        <h1>
-          What you wear is how you present yourself to the world, especially
-          today, when human contacts are so quick. Fashion is instant language
+        <h1 className="header_title">
+          Be your own king of beautiful.
+          <br /> Choose what you want in our store?
         </h1>
-        <p>Miuccia Prada</p>
-        <a href="/">Explore Now</a>
+        <a href="#directory" className="header_explore">
+          Explore Now
+        </a>
       </div>
     </div>
   );
