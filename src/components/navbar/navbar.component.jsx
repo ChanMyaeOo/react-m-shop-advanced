@@ -12,7 +12,6 @@ import {
   LogoContainer,
   OptionsContainer,
   OptionLink,
-  OptionDiv,
 } from "./navbar.styles";
 const Navbar = ({ currentUser, hidden }) => {
   return (
@@ -26,7 +25,9 @@ const Navbar = ({ currentUser, hidden }) => {
         <OptionLink to="/">Contact</OptionLink>
 
         {currentUser ? (
-          <OptionDiv onClick={() => auth.signOut()}>Sign Out</OptionDiv>
+          <OptionLink as="div" onClick={() => auth.signOut()}>
+            Sign Out
+          </OptionLink>
         ) : (
           <OptionLink to="/signin">Sign In</OptionLink>
         )}
